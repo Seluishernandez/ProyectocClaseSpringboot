@@ -29,7 +29,7 @@ public class DemoApplication {
 	@RequestMapping("/mimedicina") //
 	String mimedicacion ()
 	{
-		return "tomate las pastillas";
+		return "tomate las pastillas hombre! ";
 	}
 
 }
