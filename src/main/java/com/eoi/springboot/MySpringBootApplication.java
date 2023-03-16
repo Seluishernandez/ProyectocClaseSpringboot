@@ -1,35 +1,65 @@
 package com.eoi.springboot;
 
 import org.springframework.boot.SpringApplication;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication // HAZ TU MAGIA SPRING
-@RestController  // PREPARATE PARA RECIBIR PETICIONES HTTP //las @ son anotaciones que nos evitan tener que escribir codigo
+
+
+/**
+
+ * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n SpringBoot
+
+ */
+
+@SpringBootApplication
+
+@RestController
+
 public class MySpringBootApplication {
+
+
+
+	/**
+
+	 * The entry point of application.
+
+	 *
+
+	 * @param args the input arguments
+
+	 */
 
 	public static void main(String[] args) {
 
 		SpringApplication.run(MySpringBootApplication.class, args);
+
 	}
 
-	@RequestMapping("/") //
-	String hello()
-	{
-		return "Hello World!";
+
+
+	/**
+
+	 * Hello main  string.
+
+	 *
+
+	 * @return  el string por defecto "Main Class" para testear la aplicación
+
+	 */
+
+	@GetMapping("/")
+
+	String helloMain() {
+
+		return "Main class";
+
 	}
 
-	@RequestMapping("/hola") //
-	String hola()
-	{
-		return "Hola mundo";
-	}
 
-	@RequestMapping("/mimedicina") //
-	String mimedicacion ()
-	{
-		return "tomate las pastillas hombre! ";
-	}
 
 }
